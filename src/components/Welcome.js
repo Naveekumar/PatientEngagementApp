@@ -7,21 +7,21 @@ import {
     ImageBackground,
     TouchableHighlight
 } from 'react-native';
-
+import { Actions } from 'react-native-router-flux';
 import { Colors } from '../styles';
 import { Strings } from '../localizations';
-//import Login from './Login';
 
-import { Actions } from 'react-native-router-flux';
 
 class Welcome extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <ImageBackground style={styles.container}
+                <ImageBackground
+                    style={styles.container}
                     source={require('../assets/BSWH-welcome.png')}>
 
-                    <Image style={styles.image}
+                    <Image
+                        style={styles.image}
                         source={require('../assets/logo_baylor.png')}
                     />
 
@@ -31,7 +31,8 @@ class Welcome extends Component {
                     </View>
 
                     <View style={styles.buttonContainer}>
-                        <TouchableHighlight onPress={() => Actions.login()}
+                        <TouchableHighlight
+                            onPress={() => Actions.login()}
                             style={styles.button}
                         >
                             <Text style={styles.buttonText}> {Strings.sign_in} </Text>

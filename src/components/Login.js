@@ -27,10 +27,11 @@ class Login extends Component {
     onButtonPress() {
         const { username, password } = this.state;
         if (username === 'a' || password === 'a') {
-            Actions.dashboard()
-            this.setState({ username: '', password: '' })
-        } else
-            this.showAlert()
+            Actions.dashboard();
+            this.setState({ username: '', password: '' });
+        } else {
+            this.showAlert();
+        }
     }
 
     _handleToggleSwitch = () => this.setState(state => ({
@@ -45,7 +46,7 @@ class Login extends Component {
                 { text: 'OK', onPress: () => console.log('OK Pressed') },
             ],
             { cancelable: false }
-        )
+        );
     }
 
     render() {
@@ -53,10 +54,12 @@ class Login extends Component {
         return (
 
             <View style={styles.container}>
-                <ImageBackground style={styles.container}
+                <ImageBackground 
+                style={styles.container}
                     source={require('../assets/BSWH-login.png')}>
 
-                    <Image style={styles.image}
+                    <Image 
+                    style={styles.image}
                         source={require('../assets/logo_baylor.png')}
                     />
 
@@ -64,7 +67,8 @@ class Login extends Component {
 
                     <View style={styles.inputsContainer}>
 
-                        <TextInput style={styles.input}
+                        <TextInput 
+                        style={styles.input}
                             placeholder="Username"
                             keyboardType="email-address"
                             placeholderTextColor="#000000"
@@ -72,7 +76,8 @@ class Login extends Component {
                             onChangeText={username => this.setState({ username })} />
 
 
-                        <TextInput style={styles.input}
+                        <TextInput 
+                        style={styles.input}
 
                             placeholder="password"
                             secureTextEntry={true}
@@ -89,7 +94,8 @@ class Login extends Component {
                                 onValueChange={this._handleToggleSwitch}
                             />
                         </View>
-                        <TouchableHighlight onPress={this.onButtonPress.bind(this)}
+                        <TouchableHighlight 
+                        onPress={this.onButtonPress.bind(this)}
                             style={styles.button} >
                             <Text style={styles.buttonText}> {Strings.sign_in} </Text>
 

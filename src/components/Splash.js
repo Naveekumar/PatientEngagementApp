@@ -14,7 +14,8 @@ class Splash extends Component {
     render() {
         return (
             <View style={{ flex: 1 }}>
-                < ImageBackground style={{ flex: 1 }}
+                < ImageBackground
+                    style={{ flex: 1 }}
                     source={require('../assets/BSWH-splash.jpg')} />
             </View>
         );

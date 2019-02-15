@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TouchableHighlight } from 'react-native';
-
+import { Actions } from 'react-native-router-flux';
 import { Colors } from '../styles';
 import { Strings } from '../localizations';
 
-import { Actions } from 'react-native-router-flux';
 
 class GetCareOnline extends Component {
     render() {
@@ -96,7 +95,8 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         color: Colors.greyishBrown,
-        fontSize: 18, margin: 3
+        fontSize: 18,
+         margin: 3
     }
 
 });

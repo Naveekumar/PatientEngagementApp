@@ -7,24 +7,28 @@ import {
     ImageBackground,
     TouchableHighlight
 } from 'react-native';
+
+import { Actions } from 'react-native-router-flux';
+
 import { Strings } from '../localizations/Strings';
 import { Colors } from '../styles';
 
-import { Actions } from 'react-native-router-flux'
 
 class Dashboard extends Component {
     render() {
         return (
             <View style={styles.containerStyle}>
-                <ImageBackground style={styles.containerStyle}
+                <ImageBackground 
+                style={styles.containerStyle}
                     source={require('../assets/BSWH-Dashboard.png')}>
                     <View style={styles.cardStyle}>
-                        <View style={{ backgroundColor: 'rgba(255,0,51,0.7)', height: 150, flexDirection: "row", justifyContent: 'space-between' }}>
-                            <Image style={{ margin: 25 }}
+                        <View style={{ backgroundColor: 'rgba(255,0,51,0.7)', height: 150, flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <Image 
+                            style={{ margin: 25 }}
                                 source={require('../assets/calender-Icon.png')}
                             />
 
-                            <View style={{ flexDirection: "column", justifyContent: 'space-around', marginRight: 25 }}>
+                            <View style={{ flexDirection: 'column', justifyContent: 'space-around', marginRight: 25 }}>
                                 <View style={{ alignItems: 'flex-end' }}>
                                     <Text style={{ fontSize: 25, color: '#ffffff', marginTop: 5 }}>{Strings.appointment}</Text>
                                 </View>
@@ -34,12 +38,12 @@ class Dashboard extends Component {
                                 </View>
                             </View>
                         </View>
-                        <View style={{ flexDirection: "row", justifyContent: 'space-between', padding: 15, backgroundColor: 'rgba(255,255,255,0.5)' }}>
-                            <View style={{ flexDirection: "row", alignItems: 'center' }}>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', padding: 15, backgroundColor: 'rgba(255,255,255,0.5)' }}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <Image source={require('../assets/add-Icon.png')} />
                                 <Text style={{ fontSize: 20, marginLeft: 8 }}>{Strings.new}</Text>
                             </View>
-                            <View style={{ flexDirection: "row", alignItems: 'center' }}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <Image source={require('../assets/seeAll-Icon.png')} />
                                 <Text style={{ fontSize: 20, marginLeft: 8 }}>{Strings.see_all}</Text>
                             </View>
@@ -48,11 +52,12 @@ class Dashboard extends Component {
 
 
                     <View style={styles.cardStyle}>
-                        <View style={{ backgroundColor: 'rgba(255,0,51,0.7)', height: 100, flexDirection: "row", justifyContent: 'space-between' }}>
-                            <Image style={{ margin: 20 }}
+                        <View style={{ backgroundColor: 'rgba(255,0,51,0.7)', height: 100, flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <Image 
+                            style={{ margin: 20 }}
                                 source={require('../assets/messages.png')}
                             />
-                            <View style={{ flexDirection: "column", justifyContent: 'space-between', marginRight: 25 }}>
+                            <View style={{ flexDirection: 'column', justifyContent: 'space-between', marginRight: 25 }}>
                                 <Text style={{ fontSize: 25, color: '#ffffff', marginTop: 15 }}>{Strings.messages}</Text>
 
                                 <View style={{ alignItems: 'flex-end', marginBottom: 10 }}>
@@ -61,12 +66,12 @@ class Dashboard extends Component {
 
                             </View>
                         </View>
-                        <View style={{ flexDirection: "row", justifyContent: 'space-between', padding: 15, backgroundColor: 'rgba(255,255,255,0.7)' }}>
-                            <View style={{ flexDirection: "row", alignItems: 'center' }}>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', padding: 15, backgroundColor: 'rgba(255,255,255,0.7)' }}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <Image source={require('../assets/add-Icon.png')} />
                                 <Text style={{ fontSize: 20, marginLeft: 8 }}>{Strings.new}</Text>
                             </View>
-                            <View style={{ flexDirection: "row", alignItems: 'center' }}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                 <Image source={require('../assets/seeAll-Icon.png')} />
                                 <Text style={{ fontSize: 20, marginLeft: 8 }}>{Strings.see_all}</Text>
                             </View>
@@ -79,7 +84,8 @@ class Dashboard extends Component {
                         </Image> */}
 
 
-                        <TouchableHighlight onPress={() => Actions.FindCare()}
+                        <TouchableHighlight 
+                         onPress={() => Actions.FindCare()}
                             style={{
                                 width: '80%',
                                 marginTop: 15,
@@ -92,7 +98,7 @@ class Dashboard extends Component {
                                 borderRadius: 1
                             }}>
 
-                            <Text style={{ color: "#ffffff" }}>Find Care</Text>
+                            <Text style={{ color: '#ffffff' }}>Find Care</Text>
                         </TouchableHighlight>
 
                     </View>
@@ -109,7 +115,7 @@ const styles = StyleSheet.create({
     },
     viewStyle: {
         backgroundColor: Colors.red,
-        flexDirection: "row",
+        flexDirection: 'row',
         paddingTop: 15,
         height: 60,
         shadowColor: '#000000',

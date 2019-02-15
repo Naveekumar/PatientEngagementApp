@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet, TouchableHighlight } from 'react-native';
-
+import { Actions } from 'react-native-router-flux';
 import { Colors } from '../styles';
 import { Strings } from '../localizations';
 
-import { Actions } from 'react-native-router-flux';
 
 class FindCare extends Component {
     render() {
